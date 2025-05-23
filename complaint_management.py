@@ -65,7 +65,7 @@ def classify_complaint(complaint_text, max_retries=3):
         try:
             completion = client.chat.completions.create(
                 extra_headers={
-                    "HTTP-Referer": "YOUR_SITE_URL",  # Replace with your site URL
+                    "HTTP-Referer": "https://complaintmanagement.streamlit.app/",  # Replace with your site URL
                     "X-Title": "Complaint Management App",
                 },
                 model="google/gemma-3-27b-it:free",
