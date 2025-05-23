@@ -12,10 +12,10 @@ import time
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-# Initialize OpenRouter client
+# Initialize OpenRouter client using Streamlit secrets
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="YOUR_OPENROUTER_API_KEY",  # Replace with your OpenRouter API key
+    api_key=st.secrets["openrouter"]["api_key"]
 )
 
 # Synthetic knowledge base for RAG
