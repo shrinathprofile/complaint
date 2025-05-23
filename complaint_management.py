@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 # Initialize OpenRouter client using Streamlit secrets
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=st.secrets["openrouter"]["api_key"]
+    api_key=st.secrets[openrouter_api_key]
 )
 
 # Synthetic knowledge base for RAG
